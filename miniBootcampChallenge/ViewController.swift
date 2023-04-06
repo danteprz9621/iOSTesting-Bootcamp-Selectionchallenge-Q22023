@@ -26,6 +26,7 @@ class ViewController: UICollectionViewController {
 }
 
 
+
 // TODO: 1.- Implement a function that allows the app downloading the images without freezing the UI or causing it to work unexpected way
 
 // TODO: 2.- Implement a function that allows to fill the collection view only when all photos have been downloaded, adding an animation for waiting the completion of the task.
