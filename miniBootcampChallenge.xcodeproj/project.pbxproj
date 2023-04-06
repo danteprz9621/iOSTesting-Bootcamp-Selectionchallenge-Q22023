@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EDD02F529DEAB830014EC7A /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDD02F329DEAB830014EC7A /* Spinner.swift */; };
+		4EDD02F629DEAB830014EC7A /* ImageGridDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDD02F429DEAB830014EC7A /* ImageGridDelegate.swift */; };
 		9AA8DE852804972200C867C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DE842804972200C867C8 /* AppDelegate.swift */; };
 		9AA8DE872804972200C867C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DE862804972200C867C8 /* SceneDelegate.swift */; };
 		9AA8DE892804972200C867C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DE882804972200C867C8 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EDD02F329DEAB830014EC7A /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinner.swift; path = "../../iOSTesting-Bootcamp-Selectionchallenge-Q22023/miniBootcampChallenge/Spinner.swift"; sourceTree = "<group>"; };
+		4EDD02F429DEAB830014EC7A /* ImageGridDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGridDelegate.swift; path = "../../iOSTesting-Bootcamp-Selectionchallenge-Q22023/miniBootcampChallenge/ImageGridDelegate.swift"; sourceTree = "<group>"; };
 		9AA8DE812804972200C867C8 /* miniBootcampChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniBootcampChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA8DE842804972200C867C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AA8DE862804972200C867C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				9AA8DE882804972200C867C8 /* ViewController.swift */,
 				9AEB34022805F07F00F764A6 /* URLProvider.swift */,
 				9AA8DEB42804A2E100C867C8 /* ImageCell.swift */,
+				4EDD02F429DEAB830014EC7A /* ImageGridDelegate.swift */,
+				4EDD02F329DEAB830014EC7A /* Spinner.swift */,
 				9AA8DE8A2804972200C867C8 /* Main.storyboard */,
 				9AA8DE8D2804972300C867C8 /* Assets.xcassets */,
 				9AA8DE8F2804972300C867C8 /* LaunchScreen.storyboard */,
@@ -149,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA8DE892804972200C867C8 /* ViewController.swift in Sources */,
+				4EDD02F629DEAB830014EC7A /* ImageGridDelegate.swift in Sources */,
+				4EDD02F529DEAB830014EC7A /* Spinner.swift in Sources */,
 				9AA8DEB52804A2E100C867C8 /* ImageCell.swift in Sources */,
 				9AEB34032805F07F00F764A6 /* URLProvider.swift in Sources */,
 				9AA8DE852804972200C867C8 /* AppDelegate.swift in Sources */,

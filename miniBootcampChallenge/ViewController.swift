@@ -5,7 +5,7 @@
 
 import UIKit
 
-class ViewController: UICollectionViewController {
+class ViewController: UICollectionViewController, ImageGridDelegate {
     
     private struct Constants {
         static let title = "Mini Bootcamp Challenge"
@@ -16,15 +16,27 @@ class ViewController: UICollectionViewController {
     }
     
     private lazy var urls: [URL] = URLProvider.urls
-    
+    private var ImageGrid = ImageLoader()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.title
+        
+        //Setting the delegate of ImageGrid to self and then fetching images
+        /*Comment following two lines to disable function 1*/
+        ImageGrid.delegate = self
+        ImageGrid.fetchImages()
     }
-
-
+    
+    /*Comment finishedLoadingImages function when disabling function 1*/
+    //Function that is called once the images have finished loading
+    func finishedLoadingImages() {
+        DispatchQueue.main.async {
+            //Reload collection view with fetched images
+            self.collectionView.reloadData()
+        }
+    }
 }
-
 
 
 // TODO: 1.- Implement a function that allows the app downloading the images without freezing the UI or causing it to work unexpected way
@@ -41,11 +53,20 @@ extension ViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellID, for: indexPath) as? ImageCell else { return UICollectionViewCell() }
         
-        let url = urls[indexPath.row]
-        let data = try? Data(contentsOf: url)
-        let image = UIImage(data: data!)
-        cell.display(image)
+        /*Uncomment following four lines when disabling function 2*/
+        //let url = urls[indexPath.row]
+        //let data = try? Data(contentsOf: url)
+        //let image = UIImage(data: data!)
+        //cell.display(image)
         
+        /*Comment following four lines to disable function 2*/
+        //Display the fetched image in the cell if it exists, else displaye the spinner
+        if !ImageGrid.photos.isEmpty{
+            cell.display(ImageGrid.photos[indexPath.row])
+        } else {
+            cell.display()
+        }
+
         return cell
     }
 }

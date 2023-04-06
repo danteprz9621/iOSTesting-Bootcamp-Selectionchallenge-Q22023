@@ -14,7 +14,14 @@ class ImageCell: UICollectionViewCell {
         imageView.image = nil
     }
     
-    func display(_ image: UIImage?) {
-        imageView.image = image
+    func display(_ image: UIImage? = nil) {
+        //If image exists, stop spinner and display the image. Else spinner keeps spinning.
+        if let image = image {
+            imageView.stopSpin()
+            imageView.image = image
+        }else {
+            imageView.spin()
+        }
     }
 }
+
